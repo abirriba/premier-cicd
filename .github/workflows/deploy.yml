@@ -6,6 +6,7 @@ on:
 
 jobs:
   deploy:
+    needs: test-html
     runs-on: ubuntu-latest
     steps:
       - name: Récupération du code
