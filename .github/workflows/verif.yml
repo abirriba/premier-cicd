@@ -1,0 +1,17 @@
+name: Verification Fichier HTML
+on:
+ push:
+   branches:
+     - main
+
+jobs:
+ verification:
+   runs-on: self-hosted
+   steps:
+     - name: Récupération du code
+       uses: actions/checkout@v4
+
+     - name: Verifier presence index.html
+       run: |
+         ls -l index.html
+         echo "Le fichier est présent."
